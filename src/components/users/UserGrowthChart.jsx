@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   LineChart,
   Line,
@@ -7,19 +6,19 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Legend,
 } from "recharts";
+import { motion } from "framer-motion";
 
-const salesData = [
-  { month: "Jan", sales: 4000 },
-  { month: "Feb", sales: 3000 },
-  { month: "Mar", sales: 5000 },
-  { month: "Apr", sales: 4500 },
-  { month: "May", sales: 6000 },
-  { month: "Jun", sales: 5500 },
+const userGrowthData = [
+  { month: "Jan", users: 1000 },
+  { month: "Feb", users: 1500 },
+  { month: "Mar", users: 2000 },
+  { month: "Apr", users: 3000 },
+  { month: "May", users: 4000 },
+  { month: "Jun", users: 5000 },
 ];
 
-const SalesTrendChart = () => {
+const UserGrowthChart = () => {
   return (
     <motion.div
       className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700"
@@ -28,11 +27,11 @@ const SalesTrendChart = () => {
       transition={{ delay: 0.3 }}
     >
       {/* Title */}
-      <h2 className="text-xl font-semibold text-gray-100 mb-4">Sales Trend</h2>
+      <h2 className="text-xl font-semibold text-gray-100 mb-4">User Growth</h2>
       {/* Data presentation */}
-      <div style={{ width: "100%", height: 300 }}>
-        <ResponsiveContainer>
-          <LineChart data={salesData}>
+      <div className="h-[320px]">
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={userGrowthData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
             <XAxis dataKey="month" stroke="#9CA3AF" />
             <YAxis stroke="#9CA3AF" />
@@ -45,15 +44,16 @@ const SalesTrendChart = () => {
             />
             <Line
               type="monotone"
-              dataKey="sales"
+              dataKey="users"
               stroke="#8B5CF6"
               strokeWidth={2}
+              dot={{ fill: "#8B5CF6", strokeWidth: 2, r: 4 }}
+              activeDot={{ r: 8 }}
             />
-            <Legend />
           </LineChart>
         </ResponsiveContainer>
       </div>
     </motion.div>
   );
 };
-export default SalesTrendChart;
+export default UserGrowthChart;

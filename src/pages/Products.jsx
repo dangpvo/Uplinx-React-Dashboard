@@ -9,7 +9,7 @@ import SalesChannelChart from "../components/overview/SalesChannelChart";
 import ProductsTable from "../components/products/ProductTable";
 import SalesTrendChart from "../components/products/SalesTrendChart";
 
-const ProductsPage = () => {
+const Products = () => {
   return (
     <div className="flex-1 overflow-auto relative z-10">
       <Header title={"Products"}></Header>
@@ -58,4 +58,4 @@ const ProductsPage = () => {
   );
 };
 
-export default ProductsPage;
+export default Products;
