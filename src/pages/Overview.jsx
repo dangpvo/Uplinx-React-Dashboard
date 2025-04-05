@@ -1,8 +1,11 @@
+import { motion } from "framer-motion";
+import { BarChart2, ShoppingBag, Users, Zap } from "lucide-react";
 import React from "react";
 import Header from "../components/common/Header";
-import { motion } from "framer-motion";
 import StatCard from "../components/common/StatCard";
-import { BarChart2, ShoppingBag, Users, Zap } from "lucide-react";
+import SalesOverviewChart from "../components/overview/SalesOverviewChart";
+import CategoryDistributionChart from "../components/overview/CategoryDistributionChart";
+import SalesChannelChart from "../components/overview/SalesChannelChart";
 
 const Overview = () => {
   return (
@@ -41,6 +44,12 @@ const Overview = () => {
             color="#10b981"
           ></StatCard>
         </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <SalesOverviewChart></SalesOverviewChart>
+          <CategoryDistributionChart></CategoryDistributionChart>
+          <SalesChannelChart></SalesChannelChart>
+        </div>
       </main>
     </div>
   );
