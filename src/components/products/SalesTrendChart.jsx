@@ -9,15 +9,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
-
-const salesData = [
-  { month: "Jan", sales: 4000 },
-  { month: "Feb", sales: 3000 },
-  { month: "Mar", sales: 5000 },
-  { month: "Apr", sales: 4500 },
-  { month: "May", sales: 6000 },
-  { month: "Jun", sales: 5500 },
-];
+import { CURRENT_SALES_DATA } from "../../assets/mockData";
 
 const SalesTrendChart = () => {
   return (
@@ -32,7 +24,7 @@ const SalesTrendChart = () => {
       {/* Data presentation */}
       <div style={{ width: "100%", height: 300 }}>
         <ResponsiveContainer>
-          <LineChart data={salesData}>
+          <LineChart data={CURRENT_SALES_DATA}>
             <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
             <XAxis dataKey="month" stroke="#9CA3AF" />
             <YAxis stroke="#9CA3AF" />

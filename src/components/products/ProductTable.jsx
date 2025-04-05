@@ -1,63 +1,16 @@
 import { motion } from "framer-motion";
 import { Edit, Search, Trash2 } from "lucide-react";
 import { useState } from "react";
-
-const PRODUCT_DATA = [
-  {
-    id: 1,
-    name: "Wireless Earbuds",
-    category: "Electronics",
-    price: 59.99,
-    stock: 143,
-    sales: 1200,
-    url: "https://m.media-amazon.com/images/I/417ORmRsp+L.jpg",
-  },
-  {
-    id: 2,
-    name: "Leather Wallet",
-    category: "Accessories",
-    price: 39.99,
-    stock: 89,
-    sales: 800,
-    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa1ZUXSUoT73ecFXO88bPEmSgRFlefN1lemA&s",
-  },
-  {
-    id: 3,
-    name: "Smart Watch",
-    category: "Electronics",
-    price: 199.99,
-    stock: 56,
-    sales: 650,
-    url: "https://m.media-amazon.com/images/I/71EHTkDQqfL.jpg",
-  },
-  {
-    id: 4,
-    name: "Yoga Mat",
-    category: "Fitness",
-    price: 29.99,
-    stock: 210,
-    sales: 950,
-    url: "https://contents.mediadecathlon.com/m13380907/k$69c85d9207f3571c57009330d8c2a4d1/picture.jpg",
-  },
-  {
-    id: 5,
-    name: "Coffee Maker",
-    category: "Home",
-    price: 79.99,
-    stock: 78,
-    sales: 720,
-    url: "https://m.media-amazon.com/images/I/71LB1AbsorL.jpg",
-  },
-];
+import { PRODUCTS } from "../../assets/mockData";
 
 const ProductsTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredProducts, setFilteredProducts] = useState(PRODUCT_DATA);
+  const [filteredProducts, setFilteredProducts] = useState(PRODUCTS);
 
   const handleSearch = (e) => {
     const term = e.target.value.toLowerCase();
     setSearchTerm(term);
-    const filtered = PRODUCT_DATA.filter(
+    const filtered = PRODUCTS.filter(
       (product) =>
         product.name.toLowerCase().includes(term) ||
         product.category.toLowerCase().includes(term)

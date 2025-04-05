@@ -7,16 +7,9 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
+import { USER_DEMOGRAPHICS_DATA } from "../../assets/mockData";
 
 const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE"];
-
-const userDemographicsData = [
-  { name: "18-24", value: 20 },
-  { name: "25-34", value: 30 },
-  { name: "35-44", value: 25 },
-  { name: "45-54", value: 15 },
-  { name: "55+", value: 10 },
-];
 
 const UserDemographicsChart = () => {
   return (
@@ -35,7 +28,7 @@ const UserDemographicsChart = () => {
         <ResponsiveContainer>
           <PieChart>
             <Pie
-              data={userDemographicsData}
+              data={USER_DEMOGRAPHICS_DATA}
               cx="50%"
               cy="50%"
               outerRadius={100}
@@ -45,7 +38,7 @@ const UserDemographicsChart = () => {
                 `${name} ${(percent * 100).toFixed(0)}%`
               }
             >
-              {userDemographicsData.map((entry, index) => (
+              {USER_DEMOGRAPHICS_DATA.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}

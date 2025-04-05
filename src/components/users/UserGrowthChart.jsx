@@ -8,15 +8,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { motion } from "framer-motion";
-
-const userGrowthData = [
-  { month: "Jan", users: 1000 },
-  { month: "Feb", users: 1500 },
-  { month: "Mar", users: 2000 },
-  { month: "Apr", users: 3000 },
-  { month: "May", users: 4000 },
-  { month: "Jun", users: 5000 },
-];
+import { USER_GROWTH_DATA } from "../../assets/mockData";
 
 const UserGrowthChart = () => {
   return (
@@ -31,7 +23,7 @@ const UserGrowthChart = () => {
       {/* Data presentation */}
       <div className="h-[320px]">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={userGrowthData}>
+          <LineChart data={USER_GROWTH_DATA}>
             <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
             <XAxis dataKey="month" stroke="#9CA3AF" />
             <YAxis stroke="#9CA3AF" />
