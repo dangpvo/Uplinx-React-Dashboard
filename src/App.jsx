@@ -7,6 +7,7 @@ import Users from "./pages/Users";
 import Sales from "./pages/Sales";
 import Orders from "./pages/Orders";
 import Analytics from "./pages/Analytics";
+import Settings from "./pages/Settings";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/sales" element={<Sales></Sales>}></Route>
         <Route path="/orders" element={<Orders></Orders>}></Route>
         <Route path="/analytics" element={<Analytics></Analytics>}></Route>
+        <Route path="/settings" element={<Settings></Settings>}></Route>
       </Routes>
     </div>
   );

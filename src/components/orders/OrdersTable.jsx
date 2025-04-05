@@ -25,7 +25,7 @@ const OrdersTable = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
     >
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-6 overflow-auto">
         <h2 className="text-xl font-semibold text-gray-100">Order List</h2>
         <div className="relative">
           <input

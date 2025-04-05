@@ -10,7 +10,7 @@ import { SALES_STAT } from "../assets/mockData";
 const Sales = () => {
   return (
     <div className="flex-1 overflow-auto relative z-10">
-      <Header title="Sales Dashboard" />
+      <Header title="Sales Dashboard"></Header>
 
       <main className="max-w-7xl mx-auto py-6 px-4 lg:px-8">
         <motion.div
@@ -45,11 +45,11 @@ const Sales = () => {
           />
         </motion.div>
 
-        <SalesOverviewChart />
+        <SalesOverviewChart></SalesOverviewChart>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          <SalesByCategoryChart />
-          <DailySalesTrend />
+          <SalesByCategoryChart></SalesByCategoryChart>
+          <DailySalesTrend></DailySalesTrend>
         </div>
       </main>
     </div>
