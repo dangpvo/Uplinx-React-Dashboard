@@ -4,12 +4,12 @@ import {
   Pie,
   Cell,
   Tooltip,
-  ResponsiveContainer,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
-import { CATEGORY_DATA, GRAPH_COLORS } from "../../assets/mockData";
+import { GRAPH_COLORS, SALES_DATA_BY_CATEGORY } from "../../assets/mockData";
 
-const CategoryDistributionChart = () => {
+const SalesByCategoryChart = () => {
   return (
     <motion.div
       className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700"
@@ -18,19 +18,18 @@ const CategoryDistributionChart = () => {
       transition={{ delay: 0.3 }}
     >
       {/* Title */}
-      <h2 className="text-lg font-medium mb-4 text-gray-100">
-        Category Distribution
+      <h2 className="text-xl font-semibold text-gray-100 mb-4">
+        Sales by Category
       </h2>
 
       {/* Data Presentation */}
-      <div className="h-80">
-        <ResponsiveContainer width={"100%"} height={"100%"}>
+      <div className="w-full h-[300px]">
+        <ResponsiveContainer>
           <PieChart>
             <Pie
-              data={CATEGORY_DATA}
-              cx={"50%"}
-              cy={"50%"}
-              labelLine={false}
+              data={SALES_DATA_BY_CATEGORY}
+              cx="50%"
+              cy="50%"
               outerRadius={80}
               fill="#8884d8"
               dataKey="value"
@@ -38,7 +37,7 @@ const CategoryDistributionChart = () => {
                 `${name} ${(percent * 100).toFixed(0)}%`
               }
             >
-              {CATEGORY_DATA.map((entry, index) => (
+              {SALES_DATA_BY_CATEGORY.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={GRAPH_COLORS[index % GRAPH_COLORS.length]}
@@ -59,4 +58,4 @@ const CategoryDistributionChart = () => {
     </motion.div>
   );
 };
-export default CategoryDistributionChart;
+export default SalesByCategoryChart;

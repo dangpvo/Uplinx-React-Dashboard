@@ -10,9 +10,9 @@ import {
   Legend,
   Cell,
 } from "recharts";
-import { SALES_CHANNEL_DATA } from "../../assets/mockData";
+import { GRAPH_COLORS, SALES_CHANNEL_DATA } from "../../assets/mockData";
 
-const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
+// const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
 
 const SalesChannelChart = () => {
   return (
@@ -46,7 +46,7 @@ const SalesChannelChart = () => {
               {SALES_CHANNEL_DATA.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
+                  fill={GRAPH_COLORS[index % GRAPH_COLORS.length]}
                 />
               ))}
             </Bar>

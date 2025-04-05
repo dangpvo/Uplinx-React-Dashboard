@@ -7,9 +7,9 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { USER_DEMOGRAPHICS_DATA } from "../../assets/mockData";
+import { GRAPH_COLORS, USER_DEMOGRAPHICS_DATA } from "../../assets/mockData";
 
-const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE"];
+// const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE"];
 
 const UserDemographicsChart = () => {
   return (
@@ -41,7 +41,7 @@ const UserDemographicsChart = () => {
               {USER_DEMOGRAPHICS_DATA.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
+                  fill={GRAPH_COLORS[index % GRAPH_COLORS.length]}
                 />
               ))}
             </Pie>
