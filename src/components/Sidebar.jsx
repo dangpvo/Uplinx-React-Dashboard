@@ -69,14 +69,24 @@ const Sidebar = () => {
       animate={{ width: isSidebarOpen ? 256 : 80 }}
     >
       <div className="h-full bg-gray-800/50 backdrop-blur-md p-4 flex flex-col border-r border-gray-700">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit"
-        >
-          <Menu size={24}></Menu>
-        </motion.button>
+        <div className="flex justify-between">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            className="p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit"
+          >
+            <Menu size={24}></Menu>
+          </motion.button>
+
+          <div
+            className={`${
+              isSidebarOpen ? "w-[140px]" : "w-0"
+            } transition-all duration-300`}
+          >
+            <img className="object-cover" src="/uplink_logo.png" alt="" />
+          </div>
+        </div>
 
         <nav className="mt-8 flex-grow">
           {SIDEBAR_ITEMS.map((item, index) => (
