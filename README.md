@@ -1,6 +1,6 @@
-# Dashlite - React Dashboard (Frontend Only)
+# Uplinx - React Dashboard (Frontend Only)
 
-Dashlite is a React-based dashboard application designed to provide a user-friendly interface for data visualization and management tasks.
+Uplinx is a React-based dashboard application designed to provide a user-friendly interface for data visualization and management tasks.
 
 ## ✨ Features
 
