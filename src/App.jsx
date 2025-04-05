@@ -5,6 +5,7 @@ import Products from "./pages/Products";
 import Sidebar from "./components/Sidebar";
 import Users from "./pages/Users";
 import Sales from "./pages/Sales";
+import Orders from "./pages/Orders";
 
 const App = () => {
   return (
@@ -16,10 +17,11 @@ const App = () => {
 
       <Sidebar></Sidebar>
       <Routes>
-        <Route path="/" element={<Overview />}></Route>
-        <Route path="/products" element={<Products />}></Route>
-        <Route path="/users" element={<Users />}></Route>
-        <Route path="/sales" element={<Sales />}></Route>
+        <Route path="/" element={<Overview></Overview>}></Route>
+        <Route path="/products" element={<Products></Products>}></Route>
+        <Route path="/users" element={<Users></Users>}></Route>
+        <Route path="/sales" element={<Sales></Sales>}></Route>
+        <Route path="/orders" element={<Orders></Orders>}></Route>
       </Routes>
     </div>
   );
