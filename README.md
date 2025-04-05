@@ -50,7 +50,7 @@ Follow these steps to set up and run the project locally:
    ```
    
 ## 🌐 Live Demo  
-[Dashlite on Netlify](https://dashlite.netlify.app)  
+[Uplinx on Netlify](https://uplinx.netlify.app)  
 
 **Note:** This repository focuses only on the frontend. The backend implementation is not included.
 
