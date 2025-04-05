@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import OverviewPage from "./pages/OverviewPage";
-import ProductsPage from "./pages/ProductsPage";
+import Overview from "./pages/Overview";
+import ProductsPage from "./pages/Products";
 import Sidebar from "./components/Sidebar";
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
 
       <Sidebar></Sidebar>
       <Routes>
-        <Route path="/" element={<OverviewPage />}></Route>
+        <Route path="/" element={<Overview />}></Route>
         <Route path="/products" element={<ProductsPage />}></Route>
       </Routes>
     </div>
