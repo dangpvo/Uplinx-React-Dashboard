@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import Users from "./pages/Users";
 import Sales from "./pages/Sales";
 import Orders from "./pages/Orders";
+import Analytics from "./pages/Analytics";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/users" element={<Users></Users>}></Route>
         <Route path="/sales" element={<Sales></Sales>}></Route>
         <Route path="/orders" element={<Orders></Orders>}></Route>
+        <Route path="/analytics" element={<Analytics></Analytics>}></Route>
       </Routes>
     </div>
   );
